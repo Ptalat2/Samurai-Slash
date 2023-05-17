@@ -7,6 +7,12 @@ body {
   zoom: 100%;
 }
 
+#font{
+  font-size: 12px;
+}
+
+
+
 .widget {
   /* position: fixed; */
   bottom: 10px;
@@ -71,6 +77,8 @@ body {
     justify-content: center;
     height: 100vh;
     font-family: 'Press Start 2P', cursive;
+    margin-top:100px;
+
 
     
 }
@@ -334,10 +342,11 @@ canvas {
 
 
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .instructions {
     width: 80%; /* make the instructions box width 80% of the screen /
-    font-size: 1.2rem; / decrease the font size of the instructions */
+    font-size: 1.2rem; / decrease the font size of the instructions 
     }
-}
+} 
 
+*/
