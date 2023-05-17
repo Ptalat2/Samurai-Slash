@@ -3,7 +3,9 @@
    
 }
 
-
+body {
+  zoom: 100%;
+}
 
 .widget {
   /* position: fixed; */
