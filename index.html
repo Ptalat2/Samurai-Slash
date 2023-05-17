@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Samurai Slash</title>
+    <link rel="icon" href="favicon.ico">
+
+</head>
+
+<body>
+    <section class="welcome">
+        <h1>Welcome to <br> Samurai Slash</h1>
+        <div class="instructions">
+            <h2>Instructions:</h2><br>
+            <p>Player 1: Samurai Mack</p><br>
+            <ul>
+                <li>Jump: w</li>
+                <li>Right: d</li>
+                <li>Left: a</li>
+                <li>Attack: space</li><br>
+            </ul>
+            <p>Player 2: Kenji</p><br>
+            <ul>
+                <li>Jump: upKey</li>
+                <li>Right: rightKey</li>
+                <li>Left: leftKey</li>
+                <li>Attack: downKey</li>
+            </ul>
+        </div>
+        <button id="switch">Start Game</button>
+
+
+    </section>
+
+    <div id="countdown" style="display:none"></div>
+
+    <div id="pause" style="display:none">
+        <h2 id="pause-hd"><span class="material-symbols-outlined p">
+                motion_photos_paused
+            </span></h2>
+
+
+
+    </div>
+
+    <div id="popup" class="popup" style="display:none">
+        <div class="popup-content">
+            <div class="popup-header">Game Controls</div>
+            <div class="popup-body">
+                <div>Player 1: Samurai Mack</div>
+                <div>Jump: w</div>
+                <div>Right: d</div>
+                <div>Left: a</div>
+                <div>Attack: space</div>
+                <br>
+                <div>Player 2: Kenji</div>
+                <div>Jump: upKey</div>
+                <div>Right: rightKey</div>
+                <div>Left: leftKey</div>
+                <div>Attack: downKey</div>
+            </div>
+            <div class="popup-footer">
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section class="game" style="display:none">
+        <div style="position:relative; display:inline-block">
+            <div style="position:absolute; display:flex; width:100%; align-items: center; padding: 20px">
+                <!-- player health -->
+                <div
+                    style="position:relative;  width:100% ; display: flex; justify-content: flex-end; border: 4px solid white">
+                    <div style="background-color: red; height: 30px; width: 100%"></div>
+                    <div id="playerHealth"
+                        style="position:absolute; background-color: #818CF8 ; top:0; right: 0; bottom: 0 ;width:100%">
+                    </div>
+                </div>
+
+                <!-- timer -->
+                <div id="timer" style="background-color: black; height:50px; width:100px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white ; border-top: 3px solid white;
+                border-bottom: 3px solid white">
+                    10
+                </div>
+
+                <!-- health enemy -->
+                <div style=" position:relative; width:100%; border: 4px solid white">
+                    <div style="background-color: red; height: 30px; "></div>
+                    <div id="enemyHealth"
+                        style="position:absolute; background-color: #818CF8; top:0; right: 0; left: 0; bottom: 0">
+                    </div>
+                </div>
+            </div>
+            <div id="display-score"
+                style="position:absolute; color:white; align-items: center; justify-content: center; top:0; right:0; bottom:0; left:0; display: none; ">
+
+            </div>
+            <canvas></canvas>
+            <div class="widget">
+                <button class="widget-btn">Open Widget</button>
+                <div class="widget-options">
+                    <button class="widget-option" id="option-1">Instructions</button>
+                    <button class="widget-option" id="option-2"> <span class="material-symbols-outlined">
+                            mic
+                        </span></button>
+                    <button class="widget-option" id="option-3">Pause</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reDone" style="display:none">
+        <label>Play Again!!</label>
+        <p id="display"></p>
+        <input type="button" id="button" value="Restart"></input>
+
+
+    </section>
+
+    <!-- </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
