@@ -855,3 +855,8 @@ option2.addEventListener('click', () => {
     }
   // Code to execute when option 2 is clicked
 });
+
+window.onload = function() {
+    document.getElementById('welcome').style.zoom = "67%";
+
+  };
